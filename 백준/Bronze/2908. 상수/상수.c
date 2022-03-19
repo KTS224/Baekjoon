@@ -1,18 +1,20 @@
 #include <stdio.h>
 
+void reverse(int *num){
+    *num = (*num / 100) + (((*num % 100)/10)*10) + ((*num % 10)*100);
+}
+
 int main() {
     int a,b;
     scanf("%d %d", &a, &b);
-    int reA, reB;
     
-    reA = (a / 100) + (((a % 100)/10)*10) + ((a % 10)*100);
-    reB = (b / 100) + (((b % 100)/10)*10) + ((b % 10)*100);
+    reverse(&a);
+    reverse(&b);
     
-    if (reA > reB) {
-        printf("%d", reA);
-    } else {
-        printf("%d", reB);
-    }
+    if (a > b)
+        printf("%d", a);
+    else
+        printf("%d", b);
     
     return 0;
 }
