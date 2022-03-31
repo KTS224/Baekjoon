@@ -6,10 +6,7 @@ int fibo(int n) {
     } else if (n == 1) {
         return 1;
     }
-    for (int i = 2; i < n; i++) {
-        return fibo(n-1) + fibo(n-2);
-    }
-    return 1;
+    return fibo(n-1) + fibo(n-2);
 }
 
 int main() {
@@ -18,3 +15,4 @@ int main() {
     cout << fibo(a);
     return 0;
 }
+
