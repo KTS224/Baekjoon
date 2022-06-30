@@ -1,8 +1,7 @@
-#include<string>
 #include<iostream>
 using namespace std;
 
-int queue[8000000] = { 0 };
+int queue[1000000] = { 0 };
 int front = 0;
 int rear = -1;
 int cnt = 0;
