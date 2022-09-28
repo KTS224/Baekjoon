@@ -5,5 +5,5 @@ func solution(_ num:Int) -> String {
     //     return "Odd"
     // }
     
-    num % 2 == 0 || num == 0 ? "Even" : "Odd"
+    num % 2 == 0 ? "Even" : "Odd"
 }
