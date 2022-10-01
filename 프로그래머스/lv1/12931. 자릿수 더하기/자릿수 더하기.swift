@@ -1,19 +1,15 @@
 import Foundation
 
-func solution(_ n: Int) -> Int {
-    var answer: Int = 0
-    var intToString: String = String(n)
-    var stringToArray: [String] = []
-    // let stringToArray = nToString.compactMap{ $0.wholeNumberValue }
+func solution(_ n:Int) -> Int {
+    var answer:Int = 0
+    var number: Int = n
     
-    for _ in 1...intToString.count {
-        stringToArray.append(String(intToString.suffix(1)))
-        intToString.popLast()
+    while number >= 10 {
+        answer += number%10
+        number = number/10
     }
     
-    for index in 0..<stringToArray.count {
-        answer += Int(stringToArray[index]) ?? 0
-    }
+    answer += number%10
     
     return answer
 }
