@@ -1,9 +1,9 @@
 func solution(_ arr:[Int], _ divisor:Int) -> [Int] {
     var answer: [Int] = []
     
-    for index in 0..<arr.count {
-        if arr[index]%divisor == 0 {
-            answer.append(arr[index])
+    for a in arr {
+        if a % divisor == 0 {
+            answer.append(a)
         }
     }
     
