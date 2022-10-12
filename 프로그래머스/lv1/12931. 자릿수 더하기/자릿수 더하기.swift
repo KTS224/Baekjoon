@@ -1,12 +1,11 @@
 import Foundation
 
-func solution(_ n:Int) -> Int {
-    var answer:Int = 0
-    var number: Int = n
+func solution(_ n: Int) -> Int {
+    var answer: Int = 0
+    var s: String = String(n)
     
-    while number > 0 {
-        answer += number%10
-        number = number/10
+    for _ in s {
+        answer += Int(String(s.removeFirst()))!
     }
     
     return answer
