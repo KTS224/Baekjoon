@@ -15,7 +15,7 @@ func abbreviate(denum: inout Int, num: inout Int) {
     
     let largeNum: Int = denum > num ? denum : num
     
-    for i in 2...largeNum {
+    for i in 2...denum {
         if denum % i == 0 && num % i == 0 {
             denum /= i
             num /= i
