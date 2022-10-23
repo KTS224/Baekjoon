@@ -1,7 +1,7 @@
 import Foundation
 
 func solution(_ numbers:[Int], _ direction:String) -> [Int] {
-    var numbers = numbers
+    var numbers: [Int] = numbers
     
     if direction == "right" {
         numbers.insert(numbers.removeLast(), at: 0)
