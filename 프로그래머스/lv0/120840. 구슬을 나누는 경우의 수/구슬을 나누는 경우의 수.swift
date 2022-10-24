@@ -1,6 +1,6 @@
 import Foundation
 
-func solution(_ balls:Int, _ share:Int) -> Double {
+func solution(_ balls:Int, _ share:Int) -> Int {
     var balls: Int = balls
     var share: Int = share
     var answer: Double = 1
@@ -13,5 +13,5 @@ func solution(_ balls:Int, _ share:Int) -> Double {
         answer /= Double(balls - share - i)
     }
     
-    return answer
+    return Int(answer)
 }
