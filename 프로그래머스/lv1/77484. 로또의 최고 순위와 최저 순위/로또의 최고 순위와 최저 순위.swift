@@ -2,14 +2,19 @@ import Foundation
 
 func solution(_ lottos:[Int], _ win_nums:[Int]) -> [Int] {
     var zeroCount: Int = 0
+    var arr: [[Int]] = []
 
     for i in lottos {
         zeroCount += i == 0 ? 1 : 0
     }
-    
-    var arr = lottos.filter { $0 == win_nums[0] || $0 == win_nums[1] || $0 == win_nums[2] || $0 == win_nums[3] || $0 == win_nums[4] || $0 == win_nums[5] }
-    
-    return [changeToRank(from: arr.count + zeroCount), changeToRank(from: arr.count)]
+
+	for i in 0..<win_nums.count {
+	   arr.append(lottos.filter { $0 == win_nums[i] })
+	}
+		
+	var flatArr = arr.flatMap { $0 }
+
+    return [changeToRank(from: flatArr.count + zeroCount), changeToRank(from: flatArr.count)]
 }
 
 func changeToRank(from num: Int) ->Int {
