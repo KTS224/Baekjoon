@@ -7,7 +7,7 @@ func solution(_ n:Int) -> Int {
             continue
         }
         
-        for j in stride(from: i*i, through: n, by: i) {
+        for j in stride(from: i+i, through: n, by: i) {
             arr[j] = 0
         }
     }
