@@ -1,6 +1,6 @@
 import Foundation
 
-var N = Int(readLine()!)!
+let N = Int(readLine()!)!
 var arr: [Int] = []
 
 for _ in 1...N {
@@ -10,6 +10,4 @@ for _ in 1...N {
 
 arr.sort()
 
-for i in 0..<N {
-    print(arr[i])
-}
+print(arr.map{String($0)}.joined(separator: "\n"))
